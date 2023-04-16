@@ -20,3 +20,28 @@ resModel = lm(ORtg~X2PA+PPG+SPG+DRtg+GP+FT.+BPG+P.R+P.R.A+AGE+POS, data=nbaStats
 
 ###model summary
 summary(resModel)
+
+
+###model analysis
+
+###extract residuals
+err = resid(resModel)
+fit.v = resModel$residuals
+
+###residual plots
+plot(fit.v,err,xlab="Fitted Values",ylab="Residuals")
+plot(nbaStats$X2PA,err,xlab="X2PA",ylab="Residuals")
+plot(nbaStats$PPG,err,xlab="PPG",ylab="Residuals")
+plot(nbaStats$SPG,err,xlab="SPG",ylab="Residuals")
+plot(nbaStats$DRtg,err,xlab="DRtg",ylab="Residuals")
+plot(nbaStats$GP,err,xlab="GP",ylab="Residuals")
+plot(nbaStats$FT.,err,xlab="FT.",ylab="Residuals")
+plot(nbaStats$BPG.,err,xlab="BPG",ylab="Residuals")
+plot(nbaStats$P.R,err,xlab="P.R",ylab="Residuals")
+plot(nbaStats$P.R.A,err,xlab="P.R.A",ylab="Residuals")
+plot(nbaStats$AGE.,err,xlab="AGE",ylab="Residuals")
+plot(nbaStats$POS.,err,xlab="POS",ylab="Residuals")
+
+
+
+
