@@ -42,6 +42,10 @@ plot(nbaStats$P.R.A,err,xlab="P.R.A",ylab="Residuals")
 plot(nbaStats$AGE.,err,xlab="AGE",ylab="Residuals")
 plot(nbaStats$POS.,err,xlab="POS",ylab="Residuals")
 
+#QQ plot
+qqnorm(err)
+qqline(err)
+
 
 
 
